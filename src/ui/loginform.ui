@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginForm</class>
+ <widget class="QWidget" name="LoginForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>445</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>登陆QQ</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../rs/rs.qrc">
+    <normaloff>:/sys/qlogo.png</normaloff>:/sys/qlogo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font: 75 9pt &quot;微软雅黑&quot;;
+}
+
+#LoginForm{
+	
+	
+}
+
+#login_main_widget{
+	
+	background-color: rgb(255, 170, 127,0);
+	border-image: url(:/sys/back.png) 5;
+}
+
+#login_top_widget{
+	background-color: #09A3DC;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+
+
+#login_top_widget QLabel{
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+
+
+/*登录信息填写部分总容器*/
+#login_con_widget{
+	 
+	background-color: #EBF2F9;	
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+}
+
+/*输入框基本样式*/
+#login_con_widget QLineEdit{
+	
+	border:1px solid rgb(209,209,209);
+	height:28px;
+	font-size:10pt;
+	padding-left:6px;
+	padding-right:6px;
+	
+}
+
+/*输入框悬停样式*/
+#login_con_widget QLineEdit:hover{
+	
+	border:1px solid rgb(21,131,221)
+	
+}
+
+/*用户名输入框样式*/
+#login_con_widget QLineEdit#lineEdit_un{
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	
+}
+
+/*密码输入框基本样式*/
+#login_con_widget QLineEdit#lineEdit_pass{
+	border-top-width:0px;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+	background-image: url(:/sys/img/keyborad.png);
+	background-repeat:no;
+	background-position:right center;
+	background-origin: content;
+   
+}
+
+/*密码输入框在悬停时显示*/
+#login_con_widget QLineEdit#lineEdit_pass:hover{
+	border-top-width:1px;
+}
+
+
+/*标签基本样式*/
+#login_con_widget QLabel{
+
+	color: #09A3DC;
+}
+
+/*标签悬停*/
+#login_con_widget QLabel:hover{
+	color: rgba(9, 163, 220 ,120);
+}
+
+/*复选框文字基本样式*/
+#login_con_widget QCheckBox{
+	color:rgb(145, 145, 145);
+}
+
+/*复选框方框部分基本样式*/
+#login_con_widget QCheckBox:indicator {
+	border:1px solid #B2B2B2;
+}
+
+/*复选框方框部分选中样式*/
+#login_con_widget QCheckBox:indicator:checked {
+	border:1px solid #278CDE;
+	background-image: url(:/sys/img/check.png);
+}
+
+/*复选框方框部分悬停*/
+#login_con_widget QCheckBox:indicator:hover {
+	 border:1px solid #278CDE;
+}
+
+
+/*定义头像样式*/
+#label_touxiang{
+	border-radius:4px;	
+	border-image: url(:/sys/img/sf.jpg) 1;
+	
+}
+
+/*登录按钮样式*/
+#pushButton_login{
+	border-radius:4px;
+	border:none;
+	background-color: #09A3DC;
+	color:#fff;
+}
+
+/*登录按钮鼠标悬停样式*/
+#pushButton_login:hover{
+	background-color:rgb(60,195,245);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="login_main_widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>433</width>
+       <height>332</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>433</width>
+       <height>332</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="login_top_widget" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../../rs/rs.qrc">:/sys/img/top.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="login_con_widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>150</height>
+         </size>
+        </property>
+        <widget class="QPushButton" name="pushButton_login">
+         <property name="geometry">
+          <rect>
+           <x>132</x>
+           <y>106</y>
+           <width>195</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>195</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>登录</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_pass">
+         <property name="geometry">
+          <rect>
+           <x>132</x>
+           <y>42</y>
+           <width>195</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>it's pass?</string>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>74</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>自动登录</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_un">
+         <property name="geometry">
+          <rect>
+           <x>132</x>
+           <y>12</y>
+           <width>195</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>10</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>337994130</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_touxiang">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>12</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="geometry">
+          <rect>
+           <x>132</x>
+           <y>74</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>记住密码</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_1">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>18</y>
+           <width>48</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>注册账号</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>50</y>
+           <width>48</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>找回密码</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../rs/rs.qrc"/>
+ </resources>
+ <connections/>
+</ui>

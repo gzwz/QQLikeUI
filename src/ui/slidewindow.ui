@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SlideWindow</class>
+ <widget class="QMainWindow" name="SlideWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>280</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>280</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*定义全局滚动条样式*/
+	
+ QScrollBar:vertical {
+     width: 10px;
+	 border: 0px;
+ }
+ 
+  QScrollBar:vertical:hover {
+	 background: rgb(221,225,228);
+ }
+
+
+ QScrollBar::handle:vertical {
+    background: rgb(198,201,203);
+    border-radius:5px;
+ }
+
+
+ QScrollBar::add-line:vertical {
+     border: 0px;
+     height: 0px;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border:0px;
+     height: 0px;
+ }
+
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     border: 0px;
+	 
+ }
+
+ QScrollBar::add-page:vertical{
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+ }
+
+QScrollBar::sub-page:vertical {
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+ }
+
+ QScrollBar::add-page:vertical:hover, QScrollBar::sub-page:vertical:hover {
+	background: rgb(221,225,228);
+ }
+
+/********************************/
+ 
+ QScrollBar:horizontal {
+     border: 0px;
+     height: 10px;
+ }
+
+
+ QScrollBar::handle:horizontal {
+     background: rgba(69,124,216,150);
+      
+ }
+
+ 
+ QScrollBar::add-line:horizontal {
+     border: 0px;
+     width: 0px;
+ }
+
+ QScrollBar::sub-line:horizontal {
+     border:0px;
+     width: 0px;
+ }
+ QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal {
+     border: 0px;
+ }
+
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+     background: rgba(0,0,0,0);
+ }
+
+
+ 
+/*滚动条样式定义结束*/
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+	font: 9pt &quot;微软雅黑&quot;;
+}
+
+
+#centralwidget{
+	border:1px solid rgb(168, 168, 168);
+	background-color: rgb(85, 170, 0);
+
+}
+
+#main_top{
+	background-color: rgb(22, 154, 218);
+}
+
+#search{
+	padding:6px;
+	border:none;
+	background-color: rgba(0,0,0,60);
+	color:#fff;	
+	background-image: url(:/sys/search.png);
+	background-repeat:no;
+	background-position:right center;
+	background-origin: content;
+}
+
+#search:focus{
+	background-color: #fff;
+	color: #000;
+	border-bottom:1px solid #ccc;
+}
+
+
+#main_center,
+#center_stack&gt;QWidget{
+	background-color: rgb(241, 249, 254);
+}
+
+#center_nav{
+	min-height:38px;
+	
+	border-bottom:1px solid rgb(211, 225, 226);
+}
+
+#center_nav QPushButton{
+	border:none;
+	background-repeat:none;
+	background-image: url(:/sys/p_gray.png);
+	background-position:center;
+	height:38px;
+
+}
+
+#center_nav QPushButton:hover{
+	
+	background-image: url(:/sys/p_blue.png);
+}
+
+
+#main_bottom{
+	
+	border-top:1px solid rgb(169, 217, 241);
+	background-color: rgb(203, 233, 247);
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="main_top" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>170</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>170</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>136</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="search">
+         <property name="text">
+          <string>搜索</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="main_center" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="center_nav" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="center_stack">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_3">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QPushButton" name="pushButton_5">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QPushButton" name="pushButton_6">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="main_bottom" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
